@@ -1,0 +1,341 @@
+/* Từ tổng quan đến chi tiết
+Từ ngoài vào trong
+từ sau đến trước
+từ trái sang phải
+từ trên xuống dưới
+*/
+body {
+    font-family: Open sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.container {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px auto;
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ---------Header----------- */
+#header {
+    background-color: #23282d;
+    padding-top: 27px;
+    padding-bottom: 10px;
+    margin-bottom: 35px;
+}
+
+form#search {
+    position: relative;
+}
+
+form#search input {
+    background: #131619;
+    width: 248px;
+    outline: none;
+    border: none;
+    padding: 9px 42px 9px 15px;
+    color: #909090;
+}
+
+form#search button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    color: #a2a1a1;
+    padding: 9px 12px;
+    border: none;
+}
+
+form#search ::placeholder {
+    color: #909090;
+}
+
+nav {
+    margin-top: 7px;
+    flex: 100%;
+    border-right: 10px solid #ff2d2d;
+}
+
+ul#main-menu li a {
+    padding: 6px 20px;
+    display: block;
+    color: #eeeeee;
+}
+
+ul#main-menu li:first-child a {
+    padding-left: 0px;
+}
+
+ul#main-menu li:hover a,
+ul#main-menu li.active a {
+    color: #4db2ec;
+    text-decoration: none;
+}
+
+/* ------------featured-post------------ */
+#wp-featured-post {
+    margin-bottom: 20px;
+}
+
+.box .box-head h3 {
+    display: inline-block;
+    color: #eee;
+    background: #23282d;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 1px 15px;
+    margin-bottom: 0px;
+}
+
+.box .box-body {
+    padding-top: 20px;
+}
+
+ul.list-featured-post li {
+    flex: 360px 0 1;
+}
+
+.box.featured-post .box-body {
+    padding-bottom: 30px;
+    border: 1px solid #dadada;
+}
+
+/* css vào ảnh bài viết nổi bật */
+ul.list-featured-post li .post-thumb {
+    display: block;
+    /* mặc định có thẻ a = display: inline nên ta phải chuyển sang block */
+    overflow: hidden;
+    /* làm ảnh nở lên k vượt quá khung ban đầu, phần nào dư thì ẩn bớt */
+}
+
+ul.list-featured-post li .post-thumb img {
+    transition: all 0.25s;
+}
+
+ul.list-featured-post li .post-thumb:hover img {
+    transform: scale(1.05);
+    /* làm ảnh nở lên */
+}
+
+/* end ảnh bài viết nổi bật */
+
+.list-featured-post li a.post-title {
+    color: #5f5f5f;
+    text-transform: uppercase;
+    font-weight: 600;
+    /* mặc định thẻ a inline nên ta phải display:block */
+    display: block;
+    margin-top: 20px;
+}
+
+/* ------wp-content---------------- */
+#content {
+    flex: 765px;
+    padding-right: 15px;
+}
+
+#sidebar {
+    flex: 365px;
+    padding-left: 15px;
+}
+
+/* ---------------content----------- */
+.box.new-post .box-head {
+    border-bottom: 2px solid #4db2ec;
+    /* thiết lập boder đường line cho bài viết mới */
+}
+
+.box.new-post .box-head h3 {
+    background: #4db2ec;
+}
+
+ul.list-post li {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+ul.list-post li .post-thumb {
+    display: block;
+    padding-right: 15px;
+    flex: 280px;
+}
+
+ul.list-post li .more-info {
+    padding-left: 15px;
+}
+
+ul.list-post li .more-info .post-title {
+    color: #111111;
+    font-size: 21px;
+    display: block;
+    font-weight: 600;
+}
+
+ul.list-post li:hover .more-info a.post-title {
+    color: #4db2ec;
+    text-decoration: none;
+}
+
+ul.list-post li .more-info .post-published {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 0px;
+}
+
+ul.list-post li .more-info .post-author {
+    color: #000000;
+}
+
+ul.list-post li .more-info .post-date {
+    color: #aaa;
+}
+
+ul.list-post li .more-info .post-excerpt {
+    color: #777777;
+    font-size: 13px;
+    margin-bottom: 0px;
+}
+
+/* ---------------end content----------- */
+
+/* ---------sidebar------------ */
+
+#sidebar a.ads {
+    display: block;
+    margin-bottom: 36px;
+}
+
+.box.top-topic .box-head {
+    border-bottom: 2px solid #ff2d2d;
+}
+
+.box.top-topic .box-head h3 {
+    background: #ff2d2d;
+}
+
+ul.list-topic li a {
+    /* làm chuẩn thèn a ben relative */
+    position: relative;
+    color: #212121;
+    font-size: 16px;
+    display: block;
+    padding: 6px 0px;
+}
+
+ul.list-topic li a span.num {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+
+ul.list-topic li:hover a {
+    color: #ff5757;
+    text-decoration: none;
+}
+
+
+/* =================Footer==================== */
+#footer {
+    background: #2e2f30;
+    padding-top: 52px;
+    padding-bottom: 75px;
+    color: #f6f6f6;
+}
+
+#footer .box .box-head h3 {
+    background: none;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 18px;
+}
+
+#footer .box.logo-footer {
+    flex: 280px;
+    padding-right: 15px;
+}
+
+#footer .box.logo-footer .box-head {
+    visibility: hidden;
+    /* cho phép ẩn một một phần tử mà k làm mất không gian của phần tử đó */
+}
+
+#footer .box.about-us {
+    flex: 680px;
+    padding-left: 15px;
+    padding-right: 180px;
+}
+
+#footer .box.follow-us {
+    flex: 180px;
+    padding-right: 15px;
+}
+
+#footer .box.about-us a {
+    color: #417ea1;
+}
+
+#footer .box .box-body {
+    padding-top: 40px;
+    font-size: 14px;
+}
+
+ul.list-social li {
+    margin-left: 15px;
+}
+
+ul.list-social li:first-child {
+    margin-left: 0;
+}
+
+ul.list-social li a {
+    background: #434648;
+    padding: 5px 12px;
+    color: #eee;
+    display: block;
+}
+
+ul.list-social li:hover a {
+    color: #4db2ec;
+}
+
+/* =========================copy-right================== */
+
+#wp-copy-right {
+    background: #222527;
+    color: #ffffff;
+    padding-top: 11px;
+    padding-bottom: 0px;
+}
+
+#wp-copy-right p.copy-right {
+    margin-bottom: 0;
+    font-size: 14px;
+    /* padding-top: 10px; */
+}
+
+ul#footer-menu li a {
+    display: block;
+    color: #f3f3f3;
+    padding: 0px 13px;
+    font-size: 14px;
+    /* margin-bottom: 0; */
+}
+
+#footer-menu li:hover a {
+    color: #4db2ec;
+    text-decoration: none;
+}
+
+ul#footer-menu li:first-child a {
+    padding-left: 0px;
+}
